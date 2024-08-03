@@ -70,7 +70,8 @@ body{
 }
 
 .card-body{
-    margin: 0;
+    margin: 0 !important;
+    padding: 0;
 }
 
 .card-text p{
@@ -99,4 +100,13 @@ body{
 .edit-btn{
     background-color: #fe424d;
     border: none;
+}
+
+/* Show Page */
+.show-img{
+    height: 30vh;
+}
+
+.btns{
+    display: flex;
 }
