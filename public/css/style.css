@@ -1,8 +1,16 @@
-body{
-    color: white;
-    background-color: rgba(12, 12, 12, 0.778);
+
+
+/* Nav Bar */
+.navbar{
+    height: 5rem;
+    background-color: white;
 }
-a{
-    text-decoration: none;
-    color: white;
+
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link{
+    color: #222222;
 }
