@@ -48,7 +48,7 @@ body{
 }
 
 .f-info{
-    height: 8rem;
+    height: 7rem;
     background-color: #ebebeb;
     display: flex;
     flex-wrap: wrap;
@@ -91,6 +91,12 @@ body{
 
 /* New Page */
 .add-btn{
+    background-color: #fe424d;
+    border: none;
+}
+
+/* Edit Page */
+.edit-btn{
     background-color: #fe424d;
     border: none;
 }
