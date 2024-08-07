@@ -27,10 +27,8 @@ app.engine("ejs" , ejsMate);
 app.use(express.static(path.join(__dirname,"/public")));
 
 const validateListing = (req,res ,next) => {
-    console.log(req.body.listing);
     let {error} = listingSchema.validate(req.body);
     if(error){
-        console.log(error);
         let errMsg = error.details.map((el) => el.message).join(",");
         throw new ExpressError(400, errMsg);
     }
