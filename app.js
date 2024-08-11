@@ -82,19 +82,6 @@ app.delete("/listings/:id", wrapAsync(async(req, res) => {
     res.redirect("/listings");
 }));
 
-// app.get("/testlistening", async(req,res) => {
-//     let sampleListing = new Listing({
-//         title: "My new House",
-//         description: "Beautiful house between the town",
-//         price: 120000,
-//         location: "Kotla Arab Ali Khan",
-//         country: "Pakistan",
-//     });
-
-//     await sampleListing.save();
-//     console.log("sample was saved");
-//     res.send("successfuly saved");
-// });
 
 app.get("/", (req , res) => {
     res.send("Roat is working");
