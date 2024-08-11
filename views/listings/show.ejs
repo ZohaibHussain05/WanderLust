@@ -2,13 +2,12 @@
 <body>
     <div class="row">
         <div class="col-8 offset-2">
-            <h3 class="mt-3">Listing Details: </h3>
+            <h3 class="mt-3"><%=listing.title%></h3>
      
             <div class="card">
                 <img src="<%=listing.image%>" class="card-img-top show-img" alt="listing_image" >
                 <div class="card-body">
                     <p class="card-text">
-                        <br><b><%=listing.title%></b><br>
                         <%=listing.description%> <br>
                         <%=listing.price.toLocaleString("en-IN")%>/night <br>
                         <%=listing.location%> <br>
@@ -22,7 +21,29 @@
                     <button class="offset-3 btn btn-dark add-btn">Delete</button>
                 </form>
             </div>
-            
+            <hr>
+            <div>
+                <h4>Leave a Review</h4>
+                <form class="mb-3 needs-validation" method="post" action="/listings/<%= listing._id %>/reviews" novalidate >
+                    <div class="mb-3">
+                        <label class="form-label" for="rating">Rating</label>
+                        <input name = "review[rating]" class="form-range" type="range" min="1" max="5" id="rating">
+                    </div>
+                    <div class="mb-3">
+                        <label
+                         class="form-label" for="comment">Comment</label>
+                        <textarea
+                         name="review[comment]"
+                         class="form-control"
+                         type="text" id="comment" 
+                         cols="30" rows="5" required
+                        ></textarea>
+                        <div class="invalid-feedback">Please Add some comment for review</div>
+                    </div>
+                    <button class="btn btn-outline-dark">Submit</button>
+                </form>
+            </div>
+
         </div>
     </div>
 </body>
